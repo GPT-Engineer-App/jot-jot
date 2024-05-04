@@ -7,7 +7,7 @@ const Note = ({ note, onDelete, onEdit }) => (
     <Flex justifyContent="space-between" alignItems="center">
       <Input variant="unstyled" defaultValue={note.title} placeholder="Title" fontWeight="bold" mb={2}
         onBlur={(e) => onEdit({ ...note, title: e.target.value })} />
-      <IconButton aria-label="Edit note" icon={<FaEdit />} size="sm" onClick={() => onEdit(note)} />
+      <IconButton aria-label="Edit note" icon={<FaEdit />} size="sm" onClick={() => onEdit(note)} mr={2} />
       <IconButton aria-label="Delete note" icon={<FaTrash />} size="sm" onClick={() => onDelete(note.id)} />
     </Flex>
     <Textarea variant="unstyled" defaultValue={note.content} placeholder="Take a note..."
